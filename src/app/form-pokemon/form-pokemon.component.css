@@ -1,0 +1,15 @@
+.form-color {
+    border: 15px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+input{
+    border-radius: 8px;
+}
+
+.form-group {
+    padding: 5px;
+}

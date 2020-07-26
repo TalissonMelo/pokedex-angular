@@ -1,0 +1,15 @@
+.space {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border: 15px solid white;
+    border-radius: 10px;
+}
+
+button {
+    margin: 5px;
+}
+
+.table-active, .table-hover {
+    color: white;
+}
