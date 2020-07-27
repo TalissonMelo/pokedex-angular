@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { PokemonService } from '../service/pokemon-service';
 import { Pokemon } from '../model/pokemon.model';
 
@@ -10,6 +10,7 @@ import { Pokemon } from '../model/pokemon.model';
 export class ListPokemonComponent implements OnInit {
 
   pokemons : Pokemon[]
+  @Output() viewPokemon = new EventEmitter();
 
   constructor(private service: PokemonService) { }
 
@@ -19,5 +20,9 @@ export class ListPokemonComponent implements OnInit {
 
   delete(id: string){
     this.service.delete(id).subscribe(response => { this.ngOnInit()});
+  }
+
+  view(pokemon : Pokemon){
+    this.viewPokemon.emit(pokemon);
   }
 }

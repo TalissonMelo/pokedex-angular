@@ -10,7 +10,7 @@
             <tr class="table-active">
                 <th> {{ pokemon.name }}</th>
                 <td>
-                    <button title="Visualizar" class="btn btn-success">Visualizar</button>
+                    <button title="Visualizar" class="btn btn-success" (click)="view(pokemon)" >Visualizar</button>
                     <button title="Editar" class="btn btn-warning">Editar</button>
                     <button title="Deletar" class="btn btn-danger" (click)="delete(pokemon.id)">Deletar</button>
                 </td>

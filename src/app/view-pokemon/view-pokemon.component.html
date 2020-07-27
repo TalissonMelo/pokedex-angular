@@ -1,11 +1,11 @@
 <div class="card">
-    <div class="card-body" *ngIf="false">
-        <h5 class="card-title">Nome Pokemon</h5>
-        <p><strong>Categoria : </strong> Categoria Pokemon</p>
-        <p><strong>Habilidade : </strong> Habilidade Pokemon</p>
-        <p><strong>Peso : </strong> Peso Pokemon</p>
+    <div class="card-body" *ngIf="pokemon">
+        <h5 class="card-title"> {{ pokemon.name }}</h5>
+        <p><strong>Categoria : </strong> {{ pokemon.category }}</p>
+        <p><strong>Habilidade : </strong> {{  pokemon.skil }}</p>
+        <p><strong>Peso : </strong> {{ pokemon.weight }}</p>
     </div>
-    <div class="card-body" *ngIf="true">
+    <div class="card-body" *ngIf="!pokemon">
         <img src="../../assets/pokemon.png" />
     </div>
 </div>
