@@ -1,11 +1,16 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <app-view-pokemon [pokemon]="pokemon"></app-view-pokemon>
+<nav class="navbar navbar-light bg-red">
+    <button class="btn btn-outline-danger center" (click)="delete()">Resetar</button>
+</nav>
+<div class="space">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <app-view-pokemon [pokemon]="pokemon"></app-view-pokemon>
+      </div>
+      <div class="col-md-6">
+        <app-form-pokemon></app-form-pokemon>
+      </div>
     </div>
-    <div class="col-md-6">
-      <app-form-pokemon></app-form-pokemon>
-    </div>
+    <app-list-pokemon (viewPokemon)="viewPokemon($event)"></app-list-pokemon>
   </div>
-    <app-list-pokemon (viewPokemon)="viewPokemon($event)" ></app-list-pokemon>
 </div>

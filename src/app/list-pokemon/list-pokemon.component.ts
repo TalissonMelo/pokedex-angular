@@ -9,20 +9,28 @@ import { Pokemon } from '../model/pokemon.model';
 })
 export class ListPokemonComponent implements OnInit {
 
-  pokemons : Pokemon[]
+  pokemons: Pokemon[]
   @Output() viewPokemon = new EventEmitter();
 
   constructor(private service: PokemonService) { }
 
   ngOnInit(): void {
-    this.service.findAll().subscribe(pokemon => this.pokemons = pokemon);
+    this.findAll()
   }
 
-  delete(id: string){
-    this.service.delete(id).subscribe(response => { this.ngOnInit()});
+  delete(id: string) {
+    this.service.delete(id).subscribe(response => { this.ngOnInit() });
   }
 
-  view(pokemon : Pokemon){
+  view(pokemon: Pokemon) {
     this.viewPokemon.emit(pokemon);
+  }
+
+  edit(){
+    autohide: false
+  }
+
+  findAll() {
+    this.service.findAll().subscribe(pokemon => this.pokemons = pokemon);
   }
 }
