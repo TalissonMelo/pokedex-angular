@@ -26,10 +26,6 @@ export class ListPokemonComponent implements OnInit {
     this.viewPokemon.emit(pokemon);
   }
 
-  edit(){
-    autohide: false
-  }
-
   findAll() {
     this.service.findAll().subscribe(pokemon => this.pokemons = pokemon);
   }
